@@ -116,3 +116,18 @@ In order to generate the JSDoc documentation you should follow the steps below. 
 ## What's Next
 
 1. Make it work also for `Unpaid items`, `Canceled items`, `Canceled invoices` and `Returns and canceled orders` purchase history lists.
+
+How to Load into Chrome
+
+o fix locally, since author isn't updating the extension.
+
+    Download the extension folder (I used VS git sync, but you can also git pull https://github.com/eugenmihailescu/ebay-purchase-report)
+    Change the line @alastaira mentioned
+    Go to Chrome/More Tools/Extensions
+    Set Developer mode to ON
+    Load unpacked and point to folder with modified extension source
+    You'll also need to remove developer element from the manifest to make it work (looks like Chrome extension manifest no longer allows it).
+
+Don't forget to unload the 1.0.24. I changed version in the local modified one to 1.0.24.1 to distinguish from published one.
+
+On reload the Purchase Date appeared in the generated report. Good luck :)
